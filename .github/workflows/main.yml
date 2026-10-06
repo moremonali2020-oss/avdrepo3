@@ -15,6 +15,14 @@ jobs:
 
       - name: print python version
         run: python --version
+      
+      - name: setup python version
+        uses: actions/checkout@v7
+        with:
+        python-version: '3.13' 
+
+      - name: print python version
+        run: python --version
         
         
       - name: run python program
