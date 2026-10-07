@@ -13,18 +13,18 @@ jobs:
          uses: actions/checkout@v7
        - name: run python code
          run: python extract.py
-   transform job:
+   transform-job:
      runs-on: ubuntu-latest
      steps:
        - name: checkout code
          uses: actions/checkout@v7
        - name: run python code
          run: python transform.py
-   load job:
+   load-job:
       runs-on: python-latest
       steps:
         - name: checkout code
-          uses: checkout/@v7
+          uses: actions/checkout/@v7
         - name: run python code
           run: python load.py
 
