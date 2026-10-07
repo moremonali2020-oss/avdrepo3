@@ -21,7 +21,7 @@ jobs:
        - name: run python code
          run: python transform.py
    load-job:
-      runs-on: python-latest
+      runs-on: ubuntu-latest
       steps:
         - name: checkout code
           uses: actions/checkout@v7
