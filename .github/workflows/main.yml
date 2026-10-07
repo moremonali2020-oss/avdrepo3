@@ -1,9 +1,9 @@
 name: ETL Pipeline
 
 on:
-push:
-  branches:
-   - main
+  push:
+    branches:
+       - main
 
 jobs:
    extract-job:
@@ -18,7 +18,8 @@ jobs:
      steps:
        - name: checkout code
          uses: actions/checkout@v7
-       - name: python transform.py
+       - name: run python code
+         run: python transform.py
    load job:
       runs-on: python-latest
       steps:
